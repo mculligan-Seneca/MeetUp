@@ -3,13 +3,17 @@
     "title": "Trisha's Birthday Party",
     "description": "Come Join Trisha for her birthday party",
     "date": "2025-03-14",
-    "coordinates": { "lat": 40.8127135, "lng": -74.2763354 } 
+    "coordinates": { "lat": 40.8127135, "lng": -74.2763354 },
+    "postedBy": "John Faverau",
+    "attendees": 7
 },
 {
     "id": "0694120",
     "title": "Johnathans Rock Climbing",
-    "date": "2001-09-11",
+    "date": "2025-12-11",
     "description": "Come join Johnathan for his rock Climbing event",
-    "coordinates": { "lat": 40.7127135, "lng": -74.5763354 } 
+    "coordinates": { "lat": 40.7127135, "lng": -74.5763354 },
+    "postedBy": "Mitchell Culligan",
+    "attendees": 21
 }
 ]

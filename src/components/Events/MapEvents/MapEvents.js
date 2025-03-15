@@ -6,7 +6,7 @@ import { APIProvider,
          Pin,
          InfoWindow
         } from '@vis.gl/react-google-maps';
-
+import EventCard from '../../EventCard/EventCard';
 
 
 export default function MapEvents({ data, selectedEvent, setSelectedEvent }) {
@@ -35,13 +35,7 @@ export default function MapEvents({ data, selectedEvent, setSelectedEvent }) {
                         <InfoWindow position={selectedEvent.coordinates}
                             onClose={onInfoWindowClose}
                         >
-                            <div className='row'>
-                                <b>{selectedEvent.title}</b>
-                            </div>
-                            <div className='row'>
-                                <button className='btn btn-danger'>Register</button>
-                            </div>
-                            
+                            <EventCard tabKey={'Map'} data={selectedEvent} style={{width: '100%'}}/> 
                         </InfoWindow>
                     }
                 </Map>

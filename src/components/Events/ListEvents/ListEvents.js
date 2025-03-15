@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import EventCard from '../../Card/EventCard';
+import EventCard from '../../EventCard/EventCard';
 
 
 
@@ -8,10 +8,10 @@ import EventCard from '../../Card/EventCard';
 const ListEvents = ({ data,onCheckLocationClick }) => {
 
     return (
-        <div id="list-events">
+        <div class="d-flex flex-column align-items-center">
            {data.map(event=>(
-            <div key={event.id} className='row mb-3'>
-                <EventCard data={event} onCheckLocationClick={onCheckLocationClick(event)}/>
+            <div key={event.id} className='mb-3'>
+                <EventCard data={event} tabKey={'List'} style={{width: '75%'}} onCheckLocationClick={onCheckLocationClick(event)}/>
             </div>))} 
         </div>
     );
