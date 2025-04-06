@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import img from './building.png';
-import userIcon from './userIcon.png';
+import img from './images/building.png';
+import userIcon from './images/userIcon.png';
 // props.data is singular event item
 // contains onCheckLocationClick to load the map view
 //Figure out how to dynamically load image associated with event
@@ -36,9 +36,12 @@ export default function EventCard(props) {
                 <Card.Text>
                     {props.data.description}
                 </Card.Text>
-                { props.tabKey ==="Map"? 
-                    <Button variant='danger'>Register</Button> :
-                    <Button variant="primary" onClick={props.onCheckLocationClick}>Check Location</Button>
+                
+                { props.actionButton !==undefined && 
+                    <Button variant={props.actionButton.variant} onClick={props.actionButton.onClickAction}>
+                        {props.actionButton.label}
+                    </Button> 
+                    
                 }  
             </Card.Body>
         </Card>
